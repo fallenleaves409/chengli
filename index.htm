@@ -86,43 +86,17 @@
                         <div class="hot-product row">
                             <div class="title">热门产品</div>
                             <ul class="product-list">
-                            <!-- 热门调用未完成，产品为图集，此处调用title和第一个图片 -->
-                            <!-- {dede:arclist typeid='12' row='6' titlelen='200' orderby='click'}
-                                <li></li>
-                            {/dede:arclist} -->
+                            {dede:arclist typeid='20,23'  row='6' titlelen='200' orderby='click' }
                                 <li>
-                                    <a href="javascript:void(0)" data-html="产品详情.htm">
+                                    <a href="javascript:void(0)" data-html="[field:arcurl/]">
                                         <div class="img-wrap">
-                                            <img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt="">
+                                        <img src='[field:litpic/]' border='0' width='' height='' alt="">
                                         </div>
-                                        <span>汽车</span>
+                                        <span>[field:title/]</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:void(0)" data-html="产品详情.htm">
-                                        <div class="img-wrap">
-                                            <img src="{dede:global.cfg_templets_skin/}/image/test1.jpg" alt="">
-                                        </div>
-                                        <span>汽车</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" data-html="产品详情.htm">
-                                        <div class="img-wrap">
-                                            <img src="{dede:global.cfg_templets_skin/}/image/test2.jpg" alt="">
-                                        </div>
-                                        <span>汽车</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" data-html="产品详情.htm">
-                                        <div class="img-wrap">
-                                            <img src="{dede:global.cfg_templets_skin/}/image/u52.jpg" alt="">
-                                        </div>
-                                        <span>汽车</span>
-                                    </a>
-                                </li>
-                                <li>
+                            {/dede:arclist}
+                             <!--    <li>
                                     <a href="javascript:void(0)" data-html="产品详情.htm">
                                         <div class="img-wrap">
                                             <img src="{dede:global.cfg_templets_skin/}/image/test1.jpg" alt="">
@@ -137,7 +111,7 @@
                                         </div>
                                         <span>汽车</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>

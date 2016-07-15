@@ -6,22 +6,24 @@
         <div class="row">
             <div class="title">xxx洒水车</div>
             <ul class="pic-show-list product-list">
-                <li class="active">
-                    <div class="img-wrap"><img src="./image/u52.jpg" alt=""></div>
+            {dede:productimagelist}
+                <li>
+                    <div class="img-wrap"><img src='[field:imgsrc/]' alt=""></div>
                     <span class="mask"></span>
                 </li>
-                <li>
+            {/productimagelist}
+                <!-- <li class='active'>
                     <div class="img-wrap"><img src="./image/test.jpg" alt=""></div>
                     <span class="mask"></span>
                 </li>
                 <li>
                     <div class="img-wrap"><img src="./image/test1.jpg" alt=""></div>
                     <span class="mask"></span>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="row">
-            <p>这是xxx洒水车的介绍，这是xxx洒水车的介绍这是xxx洒水车的介绍这是xxx洒水车的介绍这是xxx洒水车的介绍这是xxx洒水车的介绍，这是xxx洒水车的介绍</p>
+            <p>{dede:field.body/}</p>
         </div>
     </div>
 </div>

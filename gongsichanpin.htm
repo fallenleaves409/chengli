@@ -5,11 +5,25 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <title>chengli</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/main.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/main.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+    function multi(pagenum,tagid)
+    {
+      var taget_obj = document.getElementById(tagid);
+      var taget_obj_page = document.getElementById("page_"+tagid);
+      myajax = new DedeAjax(taget_obj,false,false,'','','');
+      myajax.SendGet2("/plus/arcmulti.php?mtype=0&pnum="+pagenum+'&tagid='+tagid);
+      myajax = new DedeAjax(taget_obj_page,false,false,'','','');
+      myajax.SendGet2("/plus/arcmulti.php?mtype=1&pnum="+pagenum+'&tagid='+tagid);
+      DedeXHTTP = null;
+   
+    }
+</script>
 </head>
 
 <body>
@@ -33,45 +47,34 @@
             </ul>
         </div>
         <div class="container">
-            <img class="banner" src="./image/banner.png" alt="">
+            <img class="banner" src="{dede:global.cfg_templets_skin/}/image/banner.png" alt="">
         </div>
     </header>
     <div class="container main">
         <div class="row show-banner">
-            <img src="./image/product-pic.png" alt="">
+            <img src="{dede:global.cfg_templets_skin/}/image/product-pic.png" alt="">
         </div>
         <div class="row">
             <div class="product-show col-md-1">
+            {dede:channelartlist typeid=12}
                 <ul class="nav nav-pills">
                     <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                          洒水车
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-html="产品详情.htm" role="button" aria-haspopup="true" aria-expanded="false">
+                          {dede:field name='typename'/}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">1-3t</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                          垃圾车
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">1-3t</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                          消防车
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">1-3t</a></li>
+                            {dede:sql sql='Select * from dede_arctype where reid=~id~ ORDER BY id'}
+                            <li><a href="[field:typedir function="cn_substr(@me,200,9) " /]" data-html="产品详情.htm">[field:typename/]</a></li>
+                            {/dede:sql} 
                         </ul>
                     </li>
                 </ul>
+                {/dede:channelartlist}
             </div>
             <div class="main-content col-md-11">
                 <div class="product row">
                     <div class="title">
+                    <p>{dede:field name='position'/}</p>
                         <select name="priceOrder" id="">
                             <option value="0">价格从低到高</option>
                             <option value="0">价格从高到低</option>
@@ -82,31 +85,23 @@
                         </select>
                     </div>
                     <ul class="product-list">
+                    {dede:arclist typeid='20,23'  row='10000' titlelen='200' tagid='product' pagesize='21' }
                         <li>
-                            <a href="javascript:void(0)" data-html="产品详情.htm">
+                            <a href="javascript:void(0)"  data-html="[field:arcurl/]">
                                 <div class="img-wrap">
-                                    <img src="./image/u52.jpg" alt="">
+                                <img src='[field:litpic/]' border='0' width='' height='' alt="">
                                 </div>
-                                <span>汽车</span>
+                                <span>[field:title/]</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0)" data-html="产品详情.htm">
-                                <div class="img-wrap">
-                                    <img src="./image/test1.jpg" alt="">
-                                </div>
-                                <span>汽车</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" data-html="产品详情.htm">
-                                <div class="img-wrap">
-                                    <img src="./image/test2.jpg" alt="">
-                                </div>
-                                <span>汽车</span>
-                            </a>
-                        </li>
+                    {/dede:arclist}
+                        
                     </ul>
+                </div>
+                <div class="dede_pages">
+                   <ul class="pagelist">
+                        {dede:arcpagelist tagid='product'/}
+                   </ul>
                 </div>
             </div>
         </div>

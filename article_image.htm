@@ -1,0 +1,36 @@
+<div class="product-detail row">
+    <div class="col-md-6">
+    	{dede:field name='imgurls' alt='图片输出区'}
+        <img class="pic-show-big" src='[field:imgsrc/]' alt="">
+        {/dede:field}
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="title">{dede:field.title/}</div>
+            <ul class="pic-show-list product-list">
+           {dede:productimagelist}
+                <li>
+                    <div class="img-wrap"><img src='[field:imgsrc/]' alt=""></div>
+                    <span class="mask"></span>
+                </li>
+            {/dede:productimagelist}
+                <!-- <li class='active'>
+                    <div class="img-wrap"><img src="{dede:global.cfg_templets_skin/}/image/test.jpg" alt=""></div>
+                    <span class="mask"></span>
+                </li> -->
+               <!--  <li>
+                    <div class="img-wrap"><img src="{dede:global.cfg_templets_skin/}/image/test1.jpg" alt=""></div>
+                    <span class="mask"></span>
+                </li> -->
+            </ul>
+        </div>
+        <div class="row">
+            <p>{dede:field.body/}</p>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap.css">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/main.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/main.js"></script>
