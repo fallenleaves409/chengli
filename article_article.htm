@@ -59,56 +59,26 @@
                 {/dede:channelartlist}
             </div>
             <div class="main-content col-md-11">
-                <div class="product row">
-                    <div class="title">
-                    <p>{dede:field name='position'/}</p>
-                        <select name="priceOrder" id="">
-                            <option value="0">价格从低到高</option>
-                            <option value="0">价格从高到低</option>
-                        </select>
-                        <select name="salesOrder" id="">
-                            <option value="0">销量从低到高</option>
-                            <option value="0">销量从高到低</option>
-                        </select>
+                <div class="row column-content">
+                    <div class="title">{dede:field name='position'/}</div>
+                    <div class="content">
+                        <div class="view-box">
+                        <div class="artcle-title">
+                                {dede:field.title/}
+                            </div>
+                            <div class="artcle-info">
+                                {dede:field.pubdate function="MyDate('Y-m-d',@me)"/}
+                            </div>
+                            <div class="artcle-content">
+                                {dede:field.body/}
+                            </div>
+                        </div>
                     </div>
-                    <ul class="product-list">
-                    {dede:list pagesize='21'}
-                        <li>
-                            <a href="javascript:void(0)" data-html="[field:arcurl/]">
-                                <div class="img-wrap">
-                                <img src='[field:litpic/]' border='0' width='' height='' alt="">
-                                </div>
-                                <span>[field:title/]</span>
-                            </a>
-                        </li>
-                    {/dede:list}
-                        
-                    </ul>
-                </div>
-                <div class="dede_pages">
-                    <ul class="pagelist">
-                    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="product-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">产品详情</h4>
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">确定</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <footer>
         <div class="row footer-info">
             <p>这里是尾部的介绍信息具体什么内容还不清楚这里多写几个字占位置</p>

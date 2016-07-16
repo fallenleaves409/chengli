@@ -115,21 +115,18 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- 用户购买新闻 -->
                     <div class="col-md-3">
                         <ul class="sale-list">
                         {dede:arclist titlelen='200' row='6' typeid='21'}
                             <li><a href="[field:arcurl /]"> [field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a> <span></li>
                         {/dede:arclist}
-                           <!--  <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
-                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
-                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
-                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li>
-                            <li>用户张三于2016年4月20分以50000购买一台福田4t洒水车</li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 news">
+                    <!-- 公司大事 -->
                         <div class="title">公司大事</div>
                         <ul class="article-list">
                         {dede:arclist  titlelen='200' row='6' typeid='15'}
@@ -138,26 +135,6 @@
                                 <span class="date pull-right">[field:pubdate function="GetDateMK(@me)"/]</span>
                             </li>
                         {/dede:arclist}
-                           <!--  <li>
-                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
-                                <span class="date pull-right">2016-6-20</span>
-                            </li>
-                            <li>
-                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
-                                <span class="date pull-right">2016-6-20</span>
-                            </li>
-                            <li>
-                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
-                                <span class="date pull-right">2016-6-20</span>
-                            </li>
-                            <li>
-                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
-                                <span class="date pull-right">2016-6-20</span>
-                            </li>
-                            <li>
-                                <a href="">技术硬，不怕没回头客！天津朱总再一次订购</a>
-                                <span class="date pull-right">2016-6-20</span>
-                            </li> -->
                         </ul>
                     </div>
                     <div class="col-md-6 cars-info">

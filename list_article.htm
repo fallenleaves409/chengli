@@ -1,90 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
-<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:field name='keywords'/}" />
-<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
-<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
-<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}">
-<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>chengli</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/bootstrap.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/main.css">
+     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/pages.css">
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/main.js"></script>
 </head>
-<body class="articlelist">
-{dede:include filename="head.htm"/}
-<!-- /header -->
-<div class="w960 center clear mt1">
- <div class="pleft">
-  <div class="place"> <strong>当前位置:</strong> {dede:field name='position'/} </div>
-  <!-- /place -->
-  <div class="listbox">
-   <ul class="e2">
-    {dede:list pagesize='10'}
-    <li> [field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='preview'><img src='{@me['litpic']}'/></a>"); [/field:array]
-     [<b>[field:typelink/]</b>] <a href="[field:arcurl/]" class="title">[field:title/]</a> <span class="info"> <small>日期：</small>[field:pubdate function="GetDateTimeMK(@me)"/] <small>点击：</small>[field:click/] <small>好评：</small>[field:scores/] </span>
-     <p class="intro"> [field:description/]... </p>
-    </li>
-    {/dede:list}
-   </ul>
-  </div>
-  <!-- /listbox -->
-  <div class="dede_pages">
-   <ul class="pagelist">
-    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
-   </ul>
-  </div>
-  <!-- /pages -->
- </div>
- <!-- /pleft -->
- <div class="pright">
-  <div>
-   <dl class="tbox">
-    <dt><strong>栏目列表</strong></dt>
-    <dd>
-     <ul class="d6">
-      {dede:channel type='son' currentstyle="
-      <li><a href='~typelink~' class='thisclass'>~typename~</a></li>
-      "}
-      <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
-      {/dede:channel}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  <div id="listRtPicAD" style="margin:10px auto">{dede:myad name='listRtPicAD'/}</div>
-  <div class="commend">
-   <dl class="tbox light">
-    <dt class='light'><strong>推荐内容</strong></dt>
-    <dd class='light'>
-     <ul class="d4">
-      {dede:arclist flag='c' titlelen=42 row=6}
-      <li><a href="[field:arcurl/]">[field:title/]</a>
-       <p>[field:description function='cn_substr(@me,80)'/]...</p>
-      </li>
-      {/dede:arclist}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  <!-- /commend -->
-  <div class="hot mt1 light">
-   <dl class="tbox">
-    <dt class='light'><strong>热点内容</strong></dt>
-    <dd class='light'>
-     <ul class="c1 ico2">
-      {dede:arclist row=10 orderby=click}
-      <li><a href="[field:arcurl/]">[field:title/]</a></li>
-      {/dede:arclist}
-     </ul>
-    </dd>
-   </dl>
-  </div>
-  {dede:qrcode/}
-  <div id="listRtPicAD2" style="margin:10px auto">{dede:myad name='listRtPicAD2'/}</div>
- </div>
- <!-- /pright -->
-</div>
-<div id="innerfooterAD" style="margin:10px auto; width:726px">{dede:myad name='innerfooterAD'/}</div>
-{dede:include filename="footer.htm"/}
-<!-- /footer -->
+
+<body>
+    <header>
+        <div class="contact">
+            <div class="container">
+                <span class="contact-info">Tel：13269202703</span>
+                <span class="contact-info">QQ:583424568</span>
+                <span class="contact-info">E-mail:vico.wu1989@gmail.com</span>
+            </div>
+        </div>
+        <div class="nav-wrap">
+            <ul class="nav nav-pills container">
+                <li class="active"><a href='/'>首页</a></li>
+                <li><a href="/html/gscp/index.html" title="公司产品">公司产品</a></li>
+                <li><a href="/html/gcxz/index.html" title="购车须知">购车须知</a></li>
+                <li><a href="/html/gycl/index.html" title="关于程力">关于程力</a></li>
+                <li><a href="/html/clds/index.html" title="程力大事">程力大事</a></li>
+                <li><a href="/html/hyxw/index.html" title="行业新闻">行业新闻</a></li>
+                <li><a href="/html/lxwm/index.html" title="联系我们">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <img class="banner" src="{dede:global.cfg_templets_skin/}/image/banner.png" alt="">
+        </div>
+    </header>
+    <div class="container main">
+        <div class="row show-banner">
+            <img src="{dede:global.cfg_templets_skin/}/image/product-pic.png" alt="">
+        </div>
+        <div class="row">
+            <div class="product-show col-md-1">
+            {dede:channelartlist typeid=12}
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-html="产品详情.htm" role="button" aria-haspopup="true" aria-expanded="false">
+                          {dede:field name='typename'/}
+                        </a>
+                        <ul class="dropdown-menu">
+                            {dede:sql sql='Select * from dede_arctype where reid=~id~ ORDER BY id'}
+                            <li><a href="[field:typedir function="cn_substr(@me,200,9) " /]" data-html="产品详情.htm">[field:typename/]</a></li>
+                            {/dede:sql} 
+                        </ul>
+                    </li>
+                </ul>
+                {/dede:channelartlist}
+            </div>
+            <div class="main-content col-md-11">
+                <div class="row column-content">
+                    <div class="title">{dede:field name='position'/}</div>
+                    <div class="content">
+                        <ul class="article-list">
+                        {dede:list pagelist='10'}
+                            <li>
+                                <a href="[field:arcurl /]">[field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a>
+                                <span class="date pull-right">[field:pubdate function="GetDateMK(@me)"/]</span>
+                            </li>
+                        {/dede:list}
+                        </ul>
+                    </div>
+                    <div class="dede_pages">
+                      <ul class="pagelist">
+                        {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="row footer-info">
+            <p>这里是尾部的介绍信息具体什么内容还不清楚这里多写几个字占位置</p>
+        </div>
+        <p>copyright@2016</p>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,54 @@
+.dede_pages ul {
+  float: right;
+  padding: 12px 0px 12px 16px; }
+  .dede_pages ul li {
+    float: left;
+    font-family: Tahoma;
+    line-height: 17px;
+    margin-right: 6px;
+    border: 1px solid #E9E9E9; }
+    .dede_pages ul li a {
+      float: left;
+      padding: 2px 4px 2px;
+      color: #555;
+      display: block; }
+      .dede_pages ul li a:hover {
+        color: #690;
+        text-decoration: none;
+        padding: 2px 4px 2px; }
+.dede_pages .pageinfo {
+  line-height: 21px;
+  padding: 12px 10px 12px 16px;
+  color: #999; }
+  .dede_pages .pageinfo strong {
+    color: #555;
+    font-weight: normal;
+    margin: 0px 2px; }
+
+.dede_pages ul li.thisclass,
+.dede_pages ul li.thisclass a, .pagebox ul li.thisclass a:hover {
+  background-color: #F8F8F8;
+  padding: 2px 4px 2px;
+  font-weight: bold; }
+
+.pagelist {
+  text-align: right;
+  margin-right: 20px; }
+
+.view-box .artcle-title {
+  text-align: center;
+  font-size: 16px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  background-color: #fff; }
+.view-box .artcle-info {
+  text-align: center;
+  margin-top: 20px; }
+.view-box .artcle-content {
+  width: 90%;
+  text-indent: 2em;
+  margin-top: 18px; }
+  .view-box .artcle-content img {
+    max-width: 100%; }
+
+/*# sourceMappingURL=pages.css.map */
