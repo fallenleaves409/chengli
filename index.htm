@@ -10,6 +10,7 @@
     <script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/main.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/scroll.js"></script>
 </head>
 
 <body>
@@ -24,12 +25,12 @@
         <div class="nav-wrap">
             <ul class="nav nav-pills container">
                 <li class="active"><a href='/'>首页</a></li>
-                <li><a href="/html/gscp/index.html" title="公司产品">公司产品</a></li>
-                <li><a href="/html/gcxz/index.html" title="购车须知">购车须知</a></li>
-                <li><a href="/html/gycl/index.html" title="关于程力">关于程力</a></li>
-                <li><a href="/html/clds/index.html" title="程力大事">程力大事</a></li>
-                <li><a href="/html/hyxw/index.html" title="行业新闻">行业新闻</a></li>
-                <li><a href="/html/lxwm/index.html" title="联系我们">联系我们</a></li>
+                <li class="active"><a href="/html/gscp/index.html" title="公司产品">公司产品</a></li>
+                <li class="active"><a href="/html/gcxz/index.html" title="购车须知">购车须知</a></li>
+                <li class="active"><a href="/html/gycl/index.html" title="关于程力">关于程力</a></li>
+                <li class="active"><a href="/html/clds/index.html" title="程力大事">程力大事</a></li>
+                <li class="active"><a href="/html/hyxw/index.html" title="行业新闻">行业新闻</a></li>
+                <li class="active"><a href="/html/lxwm/index.html" title="联系我们">联系我们</a></li>
             </ul>
         </div>
         <div class="container">
@@ -54,22 +55,6 @@
                             {/dede:sql} 
                         </ul>
                     </li>
-                    <!-- <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-html="产品详情.htm" role="button" aria-haspopup="true" aria-expanded="false">
-                          垃圾车
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)" data-html="产品详情.htm">1-3t</a></li>
-                        </ul>
-                    </li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-html="产品详情.htm" role="button" aria-haspopup="true" aria-expanded="false">
-                          消防车
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)" data-html="产品详情.htm">1-3t</a></li>
-                        </ul>
-                    </li> -->
                 </ul>
                 {/dede:channelartlist}
             </div>
@@ -86,7 +71,7 @@
                         <div class="hot-product row">
                             <div class="title">热门产品</div>
                             <ul class="product-list">
-                            {dede:arclist typeid='20,23'  row='6' titlelen='200' orderby='click' }
+                            {dede:arclist typeid='24'  row='6' titlelen='200' flag='c'}
                                 <li>
                                     <a href="javascript:void(0)" data-html="[field:arcurl/]">
                                         <div class="img-wrap">
@@ -116,17 +101,17 @@
                         </div>
                     </div>
                     <!-- 用户购买新闻 -->
-                    <div class="col-md-3">
+                    <div class="col-md-3" id="myscroll">
                         <ul class="sale-list">
-                        {dede:arclist titlelen='200' row='6' typeid='21'}
+                        {dede:arclist titlelen='200' row='30' typeid='21'}
                             <li><a href="[field:arcurl /]"> [field:title function=' ( strlen("@me")>70 ? cn_substr("@me",70)."..." : "@me" ) ' /]</a> <span></li>
                         {/dede:arclist}
                         </ul>
                     </div>
                 </div>
                 <div class="row">
+                <!-- 公司大事 -->
                     <div class="col-md-6 news">
-                    <!-- 公司大事 -->
                         <div class="title">公司大事</div>
                         <ul class="article-list">
                         {dede:arclist  titlelen='200' row='6' typeid='15'}
@@ -209,6 +194,14 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(function(){
+            $('#myscroll').myScroll({
+                speed: 40, //数值越大，速度越慢
+                rowHeight: 62 //li的高度
+            });
+        });
+    </script>
     <footer>
         <div class="row footer-info">
             <p>这里是尾部的介绍信息具体什么内容还不清楚这里多写几个字占位置</p>

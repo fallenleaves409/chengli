@@ -51,4 +51,8 @@
   .view-box .artcle-content img {
     max-width: 100%; }
 
+#myscroll {
+  overflow: hidden;
+  height: 720px; }
+
 /*# sourceMappingURL=pages.css.map */
