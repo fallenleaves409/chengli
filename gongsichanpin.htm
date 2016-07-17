@@ -11,20 +11,6 @@
     <script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
     <script src="{dede:global.cfg_templets_skin/}/js/main.js"></script>
-    <script type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
-<script language="javascript" type="text/javascript">
-    function multi(pagenum,tagid)
-    {
-      var taget_obj = document.getElementById(tagid);
-      var taget_obj_page = document.getElementById("page_"+tagid);
-      myajax = new DedeAjax(taget_obj,false,false,'','','');
-      myajax.SendGet2("/plus/arcmulti.php?mtype=0&pnum="+pagenum+'&tagid='+tagid);
-      myajax = new DedeAjax(taget_obj_page,false,false,'','','');
-      myajax.SendGet2("/plus/arcmulti.php?mtype=1&pnum="+pagenum+'&tagid='+tagid);
-      DedeXHTTP = null;
-   
-    }
-</script>
 </head>
 
 <body>
@@ -39,12 +25,12 @@
         <div class="nav-wrap">
             <ul class="nav nav-pills container">
                 <li class="active"><a href='/'>首页</a></li>
-                <li><a href="/html/gscp/index.html" title="公司产品">公司产品</a></li>
-                <li><a href="/html/gcxz/index.html" title="购车须知">购车须知</a></li>
-                <li><a href="/html/gycl/index.html" title="关于程力">关于程力</a></li>
-                <li><a href="/html/clds/index.html" title="程力大事">程力大事</a></li>
-                <li><a href="/html/hyxw/index.html" title="行业新闻">行业新闻</a></li>
-                <li><a href="/html/lxwm/index.html" title="联系我们">联系我们</a></li>
+                <li class="active"><a href="/html/gscp/index.html" title="公司产品">公司产品</a></li>
+                <li class="active"><a href="/html/gcxz/index.html" title="购车须知">购车须知</a></li>
+                <li class="active"><a href="/html/gycl/index.html" title="关于程力">关于程力</a></li>
+                <li class="active"><a href="/html/clds/index.html" title="程力大事">程力大事</a></li>
+                <li class="active"><a href="/html/hyxw/index.html" title="行业新闻">行业新闻</a></li>
+                <li class="active"><a href="/html/lxwm/index.html" title="联系我们">联系我们</a></li>
             </ul>
         </div>
         <div class="container">
@@ -86,7 +72,7 @@
                         </select>
                     </div>
                     <ul class="product-list">
-                    {dede:arclist typeid='20,23'  row='10000' titlelen='200' tagid='product' pagesize='21' }
+                    {dede:list pagesize='21'}
                         <li>
                             <a href="javascript:void(0)"  data-html="[field:arcurl/]">
                                 <div class="img-wrap">
@@ -95,14 +81,13 @@
                                 <span>[field:title/]</span>
                             </a>
                         </li>
-                    {/dede:arclist}
-                        
+                    {/dede:list}
                     </ul>
                 </div>
-                <div class="dede_pages">
-                   <ul class="pagelist">
-                        {dede:arcpagelist tagid='product'/}
-                   </ul>
+                 <div class="dede_pages">
+                    <ul class="pagelist">
+                    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+                    </ul>
                 </div>
             </div>
         </div>
