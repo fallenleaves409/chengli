@@ -1,0 +1,120 @@
+@charset "gb2312";
+/* CSS Document */
+
+.mainRightMain{ color:#555;float:left;width:750px; padding-left:20px;padding-bottom:20px;  }
+
+/* book*/
+.book .page{ width:580px;}
+.book{ float:left; }
+.bookmain{width:640px; margin:20px auto;height:auto;background:#fff;padding:0 25px ; overflow:auto; }
+.bookline{width: 640px; height:34px;float:left; margin-top:10px;}
+.book3{ width:640px; margin:0 auto;}
+.booktop{ width:640px; height:30px; float:left; background:url(../images/bookico.png) no-repeat 10px 7px; }
+.booktop_name{ width:470px; height:30px; float:left; padding-left:30px; line-height:30px; font-weight:bold;}
+.booktop_time{ width:150px; height:30px; float:left; color:#ccc; text-align:right; line-height:30px;}
+.bookcontent{ width:610px; min-height:40px; height: auto!important; height:40px;float:left; border:1px solid #d6deef; background:url(../images/bookcontentbg.jpg) repeat-x; background-color:#fff; padding:10px; color:rgb(30,54,1);}
+.bookadmin{ width:650px; height:auto; float:left;}
+.bookadmin_top{ width:650px; height:12px; float:left;}
+.bookadmin_mid{ width:610px; min-height:30px; background:#fff; height: auto!important; height:30px; border-left:1px solid #d6deef; border-right:1px solid #d6deef; border-bottom:1px solid #d6deef; float:left; padding:10px; color:rgb(30,54,1);}
+.admintimecol{ color:#5e7194;}
+.message{ width:600px; height:auto;float:left;padding-left:50px;}
+.message li{ width:500px;height:40px; float:left; margin:0px; padding:0px; cur/sor:pointer}
+.message li input{ height:20px; line-height:20px; width:150px; border:1px solid #ccc;}
+.message li p.message_title{ width:100px; height:25px; float:left; text-align:right; line-height:20px;}
+.message li p.message_content{ width:400px; height:25px; float:left;}
+.message li.contentb{ width:500px;height:130px; float:left;}
+.message li.contentb textarea{ width:370px; height:120px; border:1px solid #ccc }
+.message li.yzm{ width:500px;height:60px; float:left;}
+.message li p.message_yzminput{ width:100px; height:15px; float:left;}
+.message li p.message_yzminput input{ width:80px;}
+.message li p.message_yzmico{ width:100px; height:40px; float:left;}
+.message li p.message_sub{ height:40px; float:left; text-align:right;}
+
+
+.ideatxt {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #1b9705;
+    color: #666;
+    margin: 10px;
+    padding: 12px;
+}
+.ideatxt h4 {
+    color: #000;
+    font-size: 14px;
+    margin: 5px;
+    padding: 0;
+}
+.ideatxt em {
+    color: #333;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 100px;
+}
+.ideatxt p, .reideatxt p {
+	padding-top:5px;
+	padding-bottom:5px;
+    text-indent: 2em;
+	font-size: 14px;
+}
+.reideatxt {
+    background: #f0fcff no-repeat scroll right bottom;
+    border-top: 2px dotted #999;
+    color: #333;
+}
+
+/*pages*/
+.pagination-wrapper {
+clear:both;
+padding:1em 0 2em 0;
+text-align:center;
+}
+.pagination {
+display: inline-block;
+*display: inline;
+*zoom: 1;
+font-size:12px;
+border-radius: 3px;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.pagination li{
+list-style: none;
+display: inline;
+float: left;
+line-height: 1em;
+text-decoration: none;
+border: 1px solid #ddd;
+border-left-width: 0;
+}
+.pagination li a {
+display: inline-block;
+padding: .5em .8em;
+background-color: #f9f9f9;
+color: #999;
+}
+.pagination li a:link{
+background:#fff;
+color: #4C78A5;
+}
+.pagination li a:hover{
+text-decoration:none;
+}
+.pagination li a:link:hover {
+color: #000;
+}
+.pagination li.thisclass {
+background-color: #f9f9f9;
+color:#999;
+}
+.pagination li:first-child {
+border-left-width: 1px;
+border-radius: 3px 0 0 3px;
+}
+.pagination li:last-child{
+border-radius: 0 3px 3px 0;
+}
+.pagination .pageinfo{
+color: #444;
+}
+
+.clear { clear:both;height:0px; overflow:hidden}
